@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "classes",
+  "info": {
+    "name": "Class",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "school": {
+      "via": "classes",
+      "model": "schools"
+    },
+    "subjects": {
+      "collection": "subjects",
+      "via": "class"
+    },
+    "temporary_teacher_requests": {
+      "via": "class",
+      "collection": "temporary-teacher-requests"
+    },
+    "guest_teacher_requests": {
+      "via": "class",
+      "collection": "guest-teacher-requests"
+    },
+    "temporary_teacher_jobs": {
+      "via": "class",
+      "collection": "temporary-teacher-jobs"
+    },
+    "guest_teacher_jobs": {
+      "via": "class",
+      "collection": "guest-teacher-jobs"
+    }
+  }
+}

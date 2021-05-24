@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spesialitations",
+  "info": {
+    "name": "Spesialitation",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "TopTalent",
+        "Teacher"
+      ],
+      "required": true
+    }
+  }
+}

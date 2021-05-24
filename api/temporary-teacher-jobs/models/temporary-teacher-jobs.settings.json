@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "temporary_teacher_jobs",
+  "info": {
+    "name": "Temporary Teacher Jobs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "durations": {
+      "type": "integer"
+    },
+    "start_teaching": {
+      "type": "date"
+    },
+    "Notes": {
+      "type": "text"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Open",
+        "Closed"
+      ],
+      "required": true,
+      "default": "Open"
+    },
+    "school": {
+      "model": "schools",
+      "via": "temporary_teacher_jobs"
+    },
+    "class": {
+      "model": "class",
+      "via": "temporary_teacher_jobs"
+    },
+    "applicants": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "temporary_teacher_jobs",
+      "dominant": true
+    }
+  }
+}

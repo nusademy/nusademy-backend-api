@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "top_talents",
+  "info": {
+    "name": "Top Talents",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "short_brief": {
+      "type": "text"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "video_branding": {
+      "type": "string"
+    },
+    "User": {
+      "via": "top_talent",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "spesialitation": {
+      "model": "spesialitation"
+    }
+  }
+}

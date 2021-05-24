@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "teachers",
+  "info": {
+    "name": "Teachers",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "last_education": {
+      "type": "enumeration",
+      "enum": [
+        "S1",
+        "S2",
+        "S3",
+        "D3",
+        "D4"
+      ],
+      "required": true
+    },
+    "campus": {
+      "type": "string",
+      "required": true
+    },
+    "major": {
+      "type": "string",
+      "required": true
+    },
+    "ipk": {
+      "type": "decimal",
+      "required": true
+    },
+    "short_brief": {
+      "type": "text",
+      "required": true
+    },
+    "video_branding": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string",
+      "required": true
+    },
+    "domicilie": {
+      "model": "cities"
+    },
+    "spesialitation": {
+      "model": "spesialitation"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "teacher"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/temporary-teacher-jobs",
+      "handler": "temporary-teacher-jobs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/temporary-teacher-jobs/count",
+      "handler": "temporary-teacher-jobs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/temporary-teacher-jobs/:id",
+      "handler": "temporary-teacher-jobs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/temporary-teacher-jobs",
+      "handler": "temporary-teacher-jobs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/temporary-teacher-jobs/:id",
+      "handler": "temporary-teacher-jobs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/temporary-teacher-jobs/:id",
+      "handler": "temporary-teacher-jobs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

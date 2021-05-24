@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/temporary-teacher-requests",
+      "handler": "temporary-teacher-requests.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/temporary-teacher-requests/count",
+      "handler": "temporary-teacher-requests.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/temporary-teacher-requests/:id",
+      "handler": "temporary-teacher-requests.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/temporary-teacher-requests",
+      "handler": "temporary-teacher-requests.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/temporary-teacher-requests/:id",
+      "handler": "temporary-teacher-requests.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/temporary-teacher-requests/:id",
+      "handler": "temporary-teacher-requests.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

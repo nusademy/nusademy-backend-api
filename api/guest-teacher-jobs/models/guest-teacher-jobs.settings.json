@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "guest_teacher_jobs",
+  "info": {
+    "name": "Guest Teacher Jobs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "target_audience": {
+      "type": "enumeration",
+      "enum": [
+        "Specific",
+        "General"
+      ],
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "time_start": {
+      "type": "time",
+      "required": true
+    },
+    "time_finished": {
+      "type": "time",
+      "required": true
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Open",
+        "Closed"
+      ],
+      "default": "Open",
+      "required": true
+    },
+    "school": {
+      "model": "schools",
+      "via": "guest_teacher_jobs"
+    },
+    "class": {
+      "model": "class",
+      "via": "guest_teacher_jobs"
+    },
+    "applicants": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "guest_teacher_jobs",
+      "dominant": true
+    }
+  }
+}

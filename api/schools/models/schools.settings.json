@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "schools",
+  "info": {
+    "name": "Schools",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "headmaster": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "creator": {
+      "unique": true,
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "school"
+    },
+    "classes": {
+      "via": "school",
+      "collection": "class"
+    },
+    "temporary_teacher_requests": {
+      "via": "school",
+      "collection": "temporary-teacher-requests"
+    },
+    "guest_teacher_requests": {
+      "via": "school",
+      "collection": "guest-teacher-requests"
+    },
+    "temporary_teacher_jobs": {
+      "via": "school",
+      "collection": "temporary-teacher-jobs"
+    },
+    "guest_teacher_jobs": {
+      "via": "school",
+      "collection": "guest-teacher-jobs"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "donations",
+  "info": {
+    "name": "Donations",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Amaount": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    }
+  }
+}

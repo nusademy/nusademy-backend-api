@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "narration_videos",
+  "info": {
+    "name": "Narration Video",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "required": true,
+      "minLength": 50
+    },
+    "url": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Creator": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "narration_videos"
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Biography",
+        "History",
+        "Education",
+        "Fiction"
+      ],
+      "required": true
+    }
+  }
+}

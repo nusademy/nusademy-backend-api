@@ -1,0 +1,100 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users-permissions_user",
+  "info": {
+    "name": "user",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "model": "role",
+      "via": "users",
+      "plugin": "users-permissions",
+      "configurable": false
+    },
+    "top_talent": {
+      "via": "User",
+      "model": "top-talents"
+    },
+    "full_name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "narration_videos": {
+      "via": "Creator",
+      "collection": "narration-video"
+    },
+    "school": {
+      "via": "creator",
+      "model": "schools"
+    },
+    "guest_teacher_requests": {
+      "via": "top_talent",
+      "collection": "guest-teacher-requests"
+    },
+    "teacher": {
+      "via": "user",
+      "model": "teachers"
+    },
+    "temporary_teacher_requests": {
+      "via": "teacher",
+      "collection": "temporary-teacher-requests"
+    },
+    "guest_teacher_jobs": {
+      "via": "applicants",
+      "collection": "guest-teacher-jobs"
+    },
+    "temporary_teacher_jobs": {
+      "via": "applicants",
+      "collection": "temporary-teacher-jobs"
+    }
+  }
+}

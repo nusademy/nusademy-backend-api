@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "guest_teacher_requests",
+  "info": {
+    "name": "Guest Teacher Requests"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "target_audience": {
+      "type": "enumeration",
+      "enum": [
+        "General",
+        "Specific"
+      ],
+      "default": "General",
+      "required": true
+    },
+    "Description": {
+      "type": "string",
+      "required": true
+    },
+    "date_of_teaching": {
+      "type": "date",
+      "required": true
+    },
+    "Notes": {
+      "type": "text"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Requested",
+        "Approved",
+        "Rejected"
+      ],
+      "required": true,
+      "default": "Requested"
+    },
+    "time_start": {
+      "type": "time",
+      "required": true
+    },
+    "time_finished": {
+      "type": "time",
+      "required": true
+    },
+    "top_talent": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "guest_teacher_requests"
+    },
+    "school": {
+      "model": "schools",
+      "via": "guest_teacher_requests"
+    },
+    "class": {
+      "model": "class",
+      "via": "guest_teacher_requests"
+    }
+  }
+}

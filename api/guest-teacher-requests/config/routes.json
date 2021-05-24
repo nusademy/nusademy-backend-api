@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/guest-teacher-requests",
+      "handler": "guest-teacher-requests.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/guest-teacher-requests/count",
+      "handler": "guest-teacher-requests.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/guest-teacher-requests/:id",
+      "handler": "guest-teacher-requests.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/guest-teacher-requests",
+      "handler": "guest-teacher-requests.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/guest-teacher-requests/:id",
+      "handler": "guest-teacher-requests.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/guest-teacher-requests/:id",
+      "handler": "guest-teacher-requests.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

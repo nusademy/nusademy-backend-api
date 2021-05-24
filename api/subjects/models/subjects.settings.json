@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subjects",
+  "info": {
+    "name": "Subjects",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "Learning_objectives": {
+      "type": "richtext"
+    },
+    "class": {
+      "via": "subjects",
+      "model": "class"
+    }
+  }
+}

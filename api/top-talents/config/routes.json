@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/top-talents",
+      "handler": "top-talents.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/top-talents/count",
+      "handler": "top-talents.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/top-talents/:id",
+      "handler": "top-talents.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/top-talents",
+      "handler": "top-talents.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/top-talents/:id",
+      "handler": "top-talents.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/top-talents/:id",
+      "handler": "top-talents.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

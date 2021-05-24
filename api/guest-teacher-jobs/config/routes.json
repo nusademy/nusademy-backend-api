@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/guest-teacher-jobs",
+      "handler": "guest-teacher-jobs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/guest-teacher-jobs/count",
+      "handler": "guest-teacher-jobs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/guest-teacher-jobs/:id",
+      "handler": "guest-teacher-jobs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/guest-teacher-jobs",
+      "handler": "guest-teacher-jobs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/guest-teacher-jobs/:id",
+      "handler": "guest-teacher-jobs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/guest-teacher-jobs/:id",
+      "handler": "guest-teacher-jobs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

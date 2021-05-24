@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "temporary_teacher_requests",
+  "info": {
+    "name": "Temporary Teacher Requests",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "class": {
+      "model": "class",
+      "via": "temporary_teacher_requests"
+    },
+    "durations": {
+      "required": true,
+      "type": "integer"
+    },
+    "expectations_start_teaching": {
+      "type": "date",
+      "required": true
+    },
+    "Notes": {
+      "type": "text"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Requested",
+        "Approved",
+        "Rejected"
+      ],
+      "default": "Requested",
+      "required": true
+    },
+    "teacher": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "temporary_teacher_requests"
+    },
+    "school": {
+      "via": "temporary_teacher_requests",
+      "model": "schools"
+    }
+  }
+}
