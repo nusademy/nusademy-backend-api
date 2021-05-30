@@ -101,7 +101,7 @@
     },
     "assignToRole": {
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "role"
     }
   }
 }

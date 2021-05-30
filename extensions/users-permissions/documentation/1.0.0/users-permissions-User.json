@@ -1701,88 +1701,32 @@
           "assignToRole": {
             "required": [
               "id",
-              "username",
-              "email",
-              "full_name"
+              "name"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
+              "name": {
                 "type": "string"
               },
-              "email": {
+              "description": {
                 "type": "string"
               },
-              "provider": {
+              "type": {
                 "type": "string"
               },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "top_talent": {
-                "type": "string"
-              },
-              "full_name": {
-                "type": "string"
-              },
-              "narration_videos": {
+              "permissions": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "school": {
-                "type": "string"
-              },
-              "guest_teacher_requests": {
+              "users": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "teacher": {
-                "type": "string"
-              },
-              "temporary_teacher_requests": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "guest_teacher_jobs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "temporary_teacher_jobs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "mbti_result": {
-                "type": "string"
-              },
-              "assignToRole": {
-                "type": "string"
               },
               "created_by": {
                 "type": "string"
