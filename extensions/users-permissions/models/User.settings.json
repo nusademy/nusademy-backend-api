@@ -95,6 +95,13 @@
     "temporary_teacher_jobs": {
       "via": "applicants",
       "collection": "temporary-teacher-jobs"
+    },
+    "mbti_result": {
+      "type": "string"
+    },
+    "assignToRole": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

@@ -8,7 +8,7 @@
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -43,9 +43,9 @@
       "via": "temporary_teacher_jobs"
     },
     "applicants": {
+      "via": "temporary_teacher_jobs",
       "plugin": "users-permissions",
       "collection": "user",
-      "via": "temporary_teacher_jobs",
       "dominant": true
     }
   }

@@ -54,9 +54,9 @@
       "required": true
     },
     "top_talent": {
+      "via": "guest_teacher_requests",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "guest_teacher_requests"
+      "model": "user"
     },
     "school": {
       "model": "schools",

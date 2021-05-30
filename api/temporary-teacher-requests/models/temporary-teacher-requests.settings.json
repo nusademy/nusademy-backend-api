@@ -42,9 +42,9 @@
       "required": true
     },
     "teacher": {
+      "via": "temporary_teacher_requests",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "temporary_teacher_requests"
+      "model": "user"
     },
     "school": {
       "via": "temporary_teacher_requests",

@@ -27,9 +27,9 @@
       "unique": true
     },
     "Creator": {
+      "via": "narration_videos",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "narration_videos"
+      "model": "user"
     },
     "Category": {
       "type": "enumeration",

@@ -58,9 +58,9 @@
       "via": "guest_teacher_jobs"
     },
     "applicants": {
+      "via": "guest_teacher_jobs",
       "plugin": "users-permissions",
       "collection": "user",
-      "via": "guest_teacher_jobs",
       "dominant": true
     }
   }

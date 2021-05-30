@@ -28,10 +28,9 @@
       "type": "string"
     },
     "creator": {
-      "unique": true,
+      "via": "school",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "school"
+      "model": "user"
     },
     "classes": {
       "via": "school",

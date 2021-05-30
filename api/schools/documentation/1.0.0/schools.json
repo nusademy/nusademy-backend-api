@@ -617,6 +617,12 @@
                   "type": "string"
                 }
               },
+              "mbti_result": {
+                "type": "string"
+              },
+              "assignToRole": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -843,9 +849,6 @@
                   "items": {
                     "type": "string"
                   }
-                },
-                "published_at": {
-                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
