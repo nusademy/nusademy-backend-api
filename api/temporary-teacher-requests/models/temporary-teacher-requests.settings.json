@@ -49,6 +49,13 @@
     "school": {
       "via": "temporary_teacher_requests",
       "model": "schools"
+    },
+    "CreatedBy": {
+      "type": "enumeration",
+      "enum": [
+        "School",
+        "Teacher"
+      ]
     }
   }
 }

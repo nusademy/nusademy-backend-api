@@ -771,6 +771,13 @@
                 "type": "string"
               }
             }
+          },
+          "CreatedBy": {
+            "type": "string",
+            "enum": [
+              "School",
+              "Teacher"
+            ]
           }
         }
       },
@@ -812,6 +819,13 @@
           },
           "school": {
             "type": "string"
+          },
+          "CreatedBy": {
+            "type": "string",
+            "enum": [
+              "School",
+              "Teacher"
+            ]
           },
           "created_by": {
             "type": "string"

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "05/30/2021 11:43:21 AM"
+    "x-generation-date": "06/01/2021 11:12:37 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -9177,6 +9177,13 @@
                 "school": {
                   "type": "string"
                 },
+                "CreatedBy": {
+                  "type": "string",
+                  "enum": [
+                    "School",
+                    "Teacher"
+                  ]
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -9244,6 +9251,13 @@
                 },
                 "class": {
                   "type": "string"
+                },
+                "CreatedBy": {
+                  "type": "string",
+                  "enum": [
+                    "School",
+                    "Teacher"
+                  ]
                 },
                 "created_by": {
                   "type": "string"
@@ -10047,6 +10061,13 @@
                 "type": "string"
               }
             }
+          },
+          "CreatedBy": {
+            "type": "string",
+            "enum": [
+              "School",
+              "Teacher"
+            ]
           }
         }
       },
@@ -10105,6 +10126,13 @@
           },
           "class": {
             "type": "string"
+          },
+          "CreatedBy": {
+            "type": "string",
+            "enum": [
+              "School",
+              "Teacher"
+            ]
           },
           "created_by": {
             "type": "string"
@@ -10495,6 +10523,13 @@
                 "school": {
                   "type": "string"
                 },
+                "CreatedBy": {
+                  "type": "string",
+                  "enum": [
+                    "School",
+                    "Teacher"
+                  ]
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -10562,6 +10597,13 @@
                 },
                 "class": {
                   "type": "string"
+                },
+                "CreatedBy": {
+                  "type": "string",
+                  "enum": [
+                    "School",
+                    "Teacher"
+                  ]
                 },
                 "created_by": {
                   "type": "string"
@@ -11684,6 +11726,13 @@
                 "type": "string"
               }
             }
+          },
+          "CreatedBy": {
+            "type": "string",
+            "enum": [
+              "School",
+              "Teacher"
+            ]
           }
         }
       },
@@ -11725,6 +11774,13 @@
           },
           "school": {
             "type": "string"
+          },
+          "CreatedBy": {
+            "type": "string",
+            "enum": [
+              "School",
+              "Teacher"
+            ]
           },
           "created_by": {
             "type": "string"
@@ -12363,6 +12419,13 @@
                 "class": {
                   "type": "string"
                 },
+                "CreatedBy": {
+                  "type": "string",
+                  "enum": [
+                    "School",
+                    "Teacher"
+                  ]
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -12476,6 +12539,13 @@
                 },
                 "school": {
                   "type": "string"
+                },
+                "CreatedBy": {
+                  "type": "string",
+                  "enum": [
+                    "School",
+                    "Teacher"
+                  ]
                 },
                 "created_by": {
                   "type": "string"
