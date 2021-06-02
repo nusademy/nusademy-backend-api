@@ -107,7 +107,7 @@ gcloud app deploy
 
 
 1. Before setting up CI/CD, first connect Cloud Build with Repository. Cloud Build -> Trigger -> Connect Repository.
-2. Create a Trigger for CI/CD, specify the repository, then in the substitution variables enter the following key (cloudbuild.yaml telah kami sediakan pada repository.):   
+2. Create a Trigger for CI/CD, specify the repository, then in the substitution variables enter the following key (We have provided cloudbuild.yaml in the repository.):   
 ```bash
 _BUCKET  =  example
 ```
