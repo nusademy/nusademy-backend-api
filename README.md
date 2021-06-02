@@ -29,12 +29,12 @@ Based on the official documentation from Strapi and our implementation, here are
 ## Local
 The following are the steps to run this application locally:
 1. Make sure that git, nodejs, npm, and posgreSQL are installed on your system.
-1. Clone this repository with the following command.
+2. Clone this repository with the following command.
 ```bash 
 git clone https://github.com/nusademy/nusademy-backend-api.git
 ```
-1. import the provided database structure
-1. Configure config/database.js into your local database environment. 
+3. import the provided database structure
+4. Configure config/database.js into your local database environment. 
 ```javascript
 module.exports = ({ env }) => ({
   defaultConnection: 'default',
@@ -53,26 +53,26 @@ module.exports = ({ env }) => ({
   },
 });
 ```
-1. Install all of dependecies that needed with following command.
+5. Install all of dependecies that needed with following command.
 ```bash
 yarn install
 ```
-1. To run this program in your local just run following command.
+6. To run this program in your local just run following command.
 ```bash
 yarn develop
 ```
-1. Wait a few moments for the application to run successfully, open the address http://localhost:1337/ in the browser to access the API.
+7. Wait a few moments for the application to run successfully, open the address http://localhost:1337/ in the browser to access the API.
 
 ## Production 
 These steps are based on the official documentation from [Strapi](https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/deployment/hosting-guides/google-app-engine.html)  with minor changes from us. The following are the steps for running this application in production:
 
 1. Make sure you already have a Google Cloud Platform account.
-1. Go to Console and open Google Cloud Shell.
-1. Create a new bucket to store the Backend API configuration file with the following command, please skip it if you already have a bucket.
+2. Go to Console and open Google Cloud Shell.
+3. Create a new bucket to store the Backend API configuration file with the following command, please skip it if you already have a bucket.
 ```bash
 gsutil mb gs://example/
 ```
-1. Create an app.yaml file for the App Engine Backend API configuration. Fill app.yaml with the following configuration (Match the credentials and database to your environment.): 
+4. Create an app.yaml file for the App Engine Backend API configuration. Fill app.yaml with the following configuration (Match the credentials and database to your environment.): 
 	```
 	runtime: nodejs10
 
@@ -90,15 +90,15 @@ gsutil mb gs://example/
 	  cloud_sql_instances: '<instance_identifier>'
 
 	```
-1. Copy app.yaml to Storage Bucket with the following command:
+5. Copy app.yaml to Storage Bucket with the following command:
 ```bash
 gsutil cp app.yaml gs://example/app.yaml
 ```
-1. Create an App Engine service with the following command
+6. Create an App Engine service with the following command
 ```bash
 gcloud app engine create
 ```
-1. Deploy Backend API to App Engine service.
+7. Deploy Backend API to App Engine service.
 ```bash
 gcloud app deploy
 ```
@@ -106,11 +106,11 @@ gcloud app deploy
 ## CI/CD
 
 
-2. Before setting up CI/CD, first connect Cloud Build with Repository. Cloud Build -> Trigger -> Connect Repository.
+1. Before setting up CI/CD, first connect Cloud Build with Repository. Cloud Build -> Trigger -> Connect Repository.
 2. Create a Trigger for CI/CD, specify the repository, then in the substitution variables enter the following key (cloudbuild.yaml telah kami sediakan pada repository.):   
 ```bash
 _BUCKET  =  example
 ```
-2. Click Save, then Run Trigger.
+3. Click Save, then Run Trigger.
 
 # END
