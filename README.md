@@ -68,11 +68,15 @@ These steps are based on the official documentation from [Strapi](https://strapi
 
 1. Make sure you already have a Google Cloud Platform account.
 2. Go to Console and open Google Cloud Shell.
-3. Create a new bucket to store the Backend API configuration file with the following command, please skip it if you already have a bucket.
+3. Clone this repository with the following command.
+```bash 
+git clone https://github.com/nusademy/webhook-ml.git
+```
+4. Create a new bucket to store the Backend API configuration file with the following command, please skip it if you already have a bucket.
 ```bash
 gsutil mb gs://example/
 ```
-4. Create an app.yaml file for the App Engine Backend API configuration. Fill app.yaml with the following configuration (Match the credentials and database to your environment.): 
+5. Create an app.yaml file for the App Engine Backend API configuration. Fill app.yaml with the following configuration (Match the credentials and database to your environment.): 
 	```
 	runtime: nodejs10
 
@@ -90,15 +94,15 @@ gsutil mb gs://example/
 	  cloud_sql_instances: '<instance_identifier>'
 
 	```
-5. Copy app.yaml to Storage Bucket with the following command:
+6. Copy app.yaml to Storage Bucket with the following command:
 ```bash
 gsutil cp app.yaml gs://example/app.yaml
 ```
-6. Create an App Engine service with the following command
+7. Create an App Engine service with the following command
 ```bash
 gcloud app engine create
 ```
-7. Deploy Backend API to App Engine service.
+8. Deploy Backend API to App Engine service.
 ```bash
 gcloud app deploy
 ```
